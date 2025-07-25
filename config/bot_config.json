@@ -1,0 +1,42 @@
+{
+  "testnet": true,
+  "symbols": [
+    "BTCUSDT",
+    "ETHUSDT"
+  ],
+  "strategies": {
+    "liquidity": {
+      "enabled": true,
+      "weight": 1.0
+    },
+    "momentum": {
+      "enabled": true,
+      "weight": 1.0
+    },
+    "chart_patterns": {
+      "enabled": true,
+      "weight": 1.0
+    },
+    "candlestick_patterns": {
+      "enabled": true,
+      "weight": 1.0
+    }
+  },
+  "risk_config": {
+    "max_position_size": 0.02,
+    "daily_loss_limit": 0.05,
+    "max_drawdown": 0.15,
+    "stop_loss_pct": 0.02,
+    "take_profit_pct": 0.04
+  },
+  "notification_config": {
+    "enabled": true,
+    "channels": [
+      "console"
+    ]
+  },
+  "logging_config": {
+    "level": "INFO",
+    "log_dir": "logs"
+  }
+}
