@@ -15,7 +15,7 @@ from crypto_trading_bot.strategies.liquidity_strategy import LiquidityStrategy
 from crypto_trading_bot.strategies.momentum_strategy import MomentumStrategy
 from crypto_trading_bot.strategies.pattern_strategy import PatternStrategy
 from crypto_trading_bot.strategies.candlestick_strategy import CandlestickStrategy
-from crypto_trading_bot.models.trading import TradingSignal, MarketData, SignalAction, Trade
+from crypto_trading_bot.models.trading import TradingSignal, MarketData, SignalAction, Trade, OrderSide
 from tests.test_mock_data import MockDataGenerator, create_mock_market_data, create_mock_trading_signal
 
 

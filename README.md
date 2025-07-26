@@ -1,160 +1,155 @@
-# Crypto Trading Bot
+# Crypto Trading Bot Dashboard
 
-A comprehensive cryptocurrency trading bot designed for Binance Futures markets with advanced market analysis capabilities and multiple trading strategies.
+A modern React-based dashboard for monitoring and controlling cryptocurrency trading bots. Built with TypeScript, Tailwind CSS, and Recharts for real-time data visualization.
 
 ## Features
 
-- **Multiple Trading Strategies**:
-  - Liquidity analysis for optimal entry/exit points
-  - Momentum-based trading across multiple timeframes
-  - Chart pattern recognition (triangles, head & shoulders, flags, wedges)
-  - Candlestick pattern analysis as fallback strategy
+- 📊 **Real-time Dashboard** - Monitor bot performance, P&L, and trading metrics
+- 📈 **Interactive Charts** - Visualize portfolio performance and price movements
+- 🎯 **Strategy Management** - Configure and monitor multiple trading strategies
+- 💼 **Portfolio Tracking** - Track asset allocation and performance
+- 🌙 **Dark Theme** - Optimized for trading environments
+- 📱 **Responsive Design** - Works on desktop and mobile devices
 
-- **Advanced Risk Management**:
-  - Automatic stop-loss and take-profit orders
-  - Position sizing based on risk parameters
-  - Daily loss limits and maximum drawdown protection
-  - Emergency stop functionality
+## Tech Stack
 
-- **Real-time Market Analysis**:
-  - WebSocket integration for live market data
-  - Technical indicator calculations (RSI, MACD, ROC, ADX)
-  - Order book depth analysis
-  - Multi-timeframe analysis
+- **Frontend**: React 18, TypeScript
+- **Styling**: Tailwind CSS
+- **Charts**: Recharts
+- **Icons**: Lucide React
+- **Routing**: React Router DOM
+- **Build Tool**: Create React App
 
-- **Performance Tracking**:
-  - Detailed trade logging and performance metrics
-  - Strategy-specific performance breakdown
-  - Risk-adjusted return calculations
-  - Backtesting capabilities
+## Quick Start
 
-- **Security & Configuration**:
-  - Encrypted API credential storage
-  - Configurable parameters for all strategies
-  - Structured logging with rotation
-  - Comprehensive error handling
+### Prerequisites
 
-## Installation
+- Node.js 16+ and npm
+- Ubuntu/Linux environment
+
+### Installation
 
 1. Clone the repository:
 ```bash
-git clone <repository-url>
-cd crypto-trading-bot
+git clone <your-repo-url>
+cd crypto-trading-bot-dashboard
 ```
 
-2. Install dependencies:
+2. Navigate to dashboard directory:
 ```bash
-pip install -r requirements.txt
+cd dashboard
 ```
 
-3. Install the package:
+3. Install dependencies:
 ```bash
-pip install -e .
+npm install
 ```
 
-## Configuration
-
-1. Set up your Binance API credentials:
-   - Create API keys in your Binance account
-   - Enable Futures trading permissions
-   - Configure IP restrictions for security
-
-2. Run the bot to create initial configuration:
+4. Start the development server:
 ```bash
-python -m crypto_trading_bot.main
+npm start
 ```
 
-3. Update the configuration files in the `config/` directory:
-   - `bot_config.json`: Main bot configuration
-   - `credentials.enc`: Encrypted API credentials (created automatically)
-
-## Usage
-
-### Running the Bot
-
-```bash
-# Run with default configuration
-python -m crypto_trading_bot.main
-
-# Or use the console script
-crypto-trading-bot
-```
-
-### Configuration Options
-
-The bot can be configured through the `config/bot_config.json` file:
-
-```json
-{
-  "testnet": true,
-  "symbols": ["BTCUSDT", "ETHUSDT"],
-  "strategies": {
-    "liquidity": true,
-    "momentum": true,
-    "chart_patterns": true,
-    "candlestick_patterns": true
-  },
-  "risk_config": {
-    "max_position_size": 0.02,
-    "daily_loss_limit": 0.05,
-    "max_drawdown": 0.15,
-    "stop_loss_pct": 0.02,
-    "take_profit_pct": 0.04
-  }
-}
-```
+5. Open your browser to `http://localhost:3000`
 
 ## Project Structure
 
 ```
-crypto_trading_bot/
-├── __init__.py
-├── main.py                 # Main application entry point
-├── interfaces.py           # Core interfaces and contracts
-├── models/                 # Data models
-├── strategies/             # Trading strategies
-│   ├── base_strategy.py    # Base strategy class
-│   ├── liquidity.py        # Liquidity analysis strategy
-│   ├── momentum.py         # Momentum trading strategy
-│   ├── chart_patterns.py   # Chart pattern recognition
-│   └── candlestick.py      # Candlestick pattern analysis
-├── managers/               # Core system managers
-│   ├── market_manager.py   # Market data management
-│   ├── strategy_manager.py # Strategy coordination
-│   ├── risk_manager.py     # Risk management
-│   ├── trade_manager.py    # Trade execution
-│   └── portfolio_manager.py # Portfolio tracking
-└── utils/                  # Utility modules
-    ├── config.py           # Configuration management
-    ├── logging_config.py   # Logging setup
-    └── technical_analysis.py # Technical indicators
+crypto-trading-bot-dashboard/
+├── dashboard/                 # React frontend application
+│   ├── public/               # Static assets
+│   ├── src/
+│   │   ├── components/       # Reusable UI components
+│   │   │   ├── Navbar.tsx
+│   │   │   └── Sidebar.tsx
+│   │   ├── pages/           # Page components
+│   │   │   ├── Dashboard.tsx
+│   │   │   ├── Portfolio.tsx
+│   │   │   └── Strategies.tsx
+│   │   ├── App.tsx          # Main app component
+│   │   ├── index.tsx        # Entry point
+│   │   ├── index.css        # Global styles
+│   │   └── config.ts        # Configuration
+│   ├── package.json
+│   └── tailwind.config.js
+├── api_server.py            # Python backend (optional)
+├── tests/                   # Test files
+└── README.md
 ```
+
+## Available Scripts
+
+In the `dashboard` directory:
+
+- `npm start` - Start development server
+- `npm build` - Build for production
+- `npm test` - Run tests
+- `npm run eject` - Eject from Create React App
+
+## Configuration
+
+The dashboard can be configured via environment variables:
+
+```bash
+# .env file in dashboard directory
+REACT_APP_API_URL=http://localhost:8000
+REACT_APP_WS_URL=ws://localhost:8000/ws
+```
+
+## Features Overview
+
+### Dashboard
+- Bot status monitoring
+- Real-time P&L tracking
+- Performance metrics
+- Interactive price charts
+
+### Portfolio
+- Asset allocation visualization
+- Portfolio performance tracking
+- Balance monitoring
+
+### Strategies
+- Strategy configuration
+- Performance comparison
+- Enable/disable strategies
+- Parameter tuning
 
 ## Development
 
-### Running Tests
+### Adding New Components
 
-```bash
-pytest tests/
-```
+1. Create component in `src/components/` or `src/pages/`
+2. Follow TypeScript best practices
+3. Use Tailwind CSS for styling
+4. Add proper prop types and interfaces
 
-### Code Formatting
+### Styling Guidelines
 
-```bash
-black crypto_trading_bot/
-flake8 crypto_trading_bot/
-```
+- Use Tailwind CSS utility classes
+- Follow dark theme color scheme
+- Maintain responsive design
+- Use consistent spacing and typography
 
-### Type Checking
+## Contributing
 
-```bash
-mypy crypto_trading_bot/
-```
-
-## Risk Disclaimer
-
-This trading bot is for educational and research purposes. Cryptocurrency trading involves substantial risk of loss. Never trade with money you cannot afford to lose. Always test strategies thoroughly on testnet before using real funds.
+1. Fork the repository
+2. Create a feature branch
+3. Make your changes
+4. Test thoroughly
+5. Submit a pull request
 
 ## License
 
-MIT License - see LICENSE file for details.
+MIT License - see LICENSE file for details
+
+## Support
+
+For issues and questions:
+- Create an issue on GitHub
+- Check existing documentation
+- Review the code examples
+
+---
+
+Built with ❤️ for the crypto trading community
