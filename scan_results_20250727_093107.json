@@ -1,0 +1,67 @@
+{
+  "scan_number": 1,
+  "timestamp": "2025-07-27T09:31:07.504993",
+  "total_signals": 4,
+  "signals": [
+    {
+      "symbol": "AVAAIUSDT",
+      "action": "SELL",
+      "strategy": "rsi_overbought",
+      "confidence": 90,
+      "current_price": 0.049,
+      "target_price": 0.04753,
+      "stop_loss": 0.049980000000000004,
+      "profit_potential_pct": -2.9999999999999982,
+      "risk_potential_pct": -2.0000000000000036,
+      "volume_24h": 103429.0,
+      "price_change_24h": -12.296,
+      "rsi": 100.0,
+      "score": 51.0206858
+    },
+    {
+      "symbol": "PROMPTUSDT",
+      "action": "SELL",
+      "strategy": "rsi_overbought",
+      "confidence": 90,
+      "current_price": 0.173,
+      "target_price": 0.16781,
+      "stop_loss": 0.17645999999999998,
+      "profit_potential_pct": -3.0000000000000004,
+      "risk_potential_pct": -1.999999999999995,
+      "volume_24h": 209814.0,
+      "price_change_24h": -9.896,
+      "rsi": 100.0,
+      "score": 50.8859628
+    },
+    {
+      "symbol": "1000SATSUSDT",
+      "action": "BUY",
+      "strategy": "rsi_oversold",
+      "confidence": 90,
+      "current_price": 4.6e-05,
+      "target_price": 4.7380000000000004e-05,
+      "stop_loss": 4.508e-05,
+      "profit_potential_pct": 3.000000000000008,
+      "risk_potential_pct": 1.9999999999999956,
+      "volume_24h": 5654260.0,
+      "price_change_24h": -6.122,
+      "rsi": 0.0,
+      "score": 46.313852
+    },
+    {
+      "symbol": "VICUSDT",
+      "action": "BUY",
+      "strategy": "rsi_oversold",
+      "confidence": 90,
+      "current_price": 0.2534,
+      "target_price": 0.261002,
+      "stop_loss": 0.248332,
+      "profit_potential_pct": 2.9999999999999987,
+      "risk_potential_pct": 2.0000000000000067,
+      "volume_24h": 115738.0,
+      "price_change_24h": -4.341,
+      "rsi": 0.0,
+      "score": 42.5346476
+    }
+  ]
+}

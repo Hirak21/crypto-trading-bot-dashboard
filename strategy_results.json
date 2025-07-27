@@ -1,0 +1,72 @@
+{
+  "scan_type": "original_bot_strategies",
+  "timestamp": "2025-07-27T10:52:28.953886",
+  "scan_duration": 313.1171064376831,
+  "total_signals": 114,
+  "selected_trades": [
+    {
+      "symbol": "SPELLUSDT",
+      "action": "BUY",
+      "confidence": 80,
+      "strategy": "momentum",
+      "current_price": 0.0005282,
+      "target_price": 0.0005493280000000001,
+      "stop_loss": 0.000512354,
+      "score": 58.2857406,
+      "liquidity_score": null,
+      "momentum_score": 80,
+      "pattern_detected": null,
+      "candlestick_pattern": null,
+      "rsi": 100.0,
+      "macd_signal": "bullish"
+    },
+    {
+      "symbol": "DOGSUSDT",
+      "action": "SELL",
+      "confidence": 75,
+      "strategy": "pattern",
+      "current_price": 0.0001448,
+      "target_price": 0.000139732,
+      "stop_loss": 0.00014842,
+      "score": 52.899237,
+      "liquidity_score": null,
+      "momentum_score": null,
+      "pattern_detected": "bb_upper_touch",
+      "candlestick_pattern": null,
+      "rsi": 100.0,
+      "macd_signal": "bearish"
+    },
+    {
+      "symbol": "DOGEUSDT",
+      "action": "BUY",
+      "confidence": 75,
+      "strategy": "momentum",
+      "current_price": 0.2571,
+      "target_price": 0.267384,
+      "stop_loss": 0.249387,
+      "score": 51.7281834,
+      "liquidity_score": null,
+      "momentum_score": 75,
+      "pattern_detected": null,
+      "candlestick_pattern": null,
+      "rsi": 38.24116796363886,
+      "macd_signal": "bullish"
+    },
+    {
+      "symbol": "PROMPTUSDT",
+      "action": "SELL",
+      "confidence": 75,
+      "strategy": "pattern",
+      "current_price": 0.173,
+      "target_price": 0.16694499999999998,
+      "stop_loss": 0.17732499999999998,
+      "score": 51.0419628,
+      "liquidity_score": null,
+      "momentum_score": null,
+      "pattern_detected": "bb_upper_touch",
+      "candlestick_pattern": null,
+      "rsi": 100.0,
+      "macd_signal": "bearish"
+    }
+  ]
+}

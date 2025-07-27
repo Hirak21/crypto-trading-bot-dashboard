@@ -1,0 +1,17 @@
+{
+  "scan_type": "15_minute_scalping",
+  "timestamp": "2025-07-27T10:28:19.959784",
+  "total_scan_duration": 194.66032338142395,
+  "selected_trades": [
+    {
+      "symbol": "ETHUSDT",
+      "action": "SELL",
+      "confidence": 80,
+      "strategy": "ema_cross_short_15m",
+      "current_price": 3715.08,
+      "target_price": 3640.7784,
+      "stop_loss": 3752.230799999999,
+      "score": 50.0904694719383,
+      "price_change": 0.030156490646099876,
+      "rsi": 35.7580645161289,
+      "volume_spike": 

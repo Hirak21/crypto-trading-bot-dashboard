@@ -1,0 +1,43 @@
+name: Test Trading Bot
+
+on:
+  push:
+    branches: [ main, develop ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version: [3.8, 3.9, '3.10', 3.11]
+
+    steps:
+    - uses: actions/checkout@v3
+    
+    - name: Set up Python ${{ matrix.python-version }}
+      uses: actions/setup-python@v3
+      with:
+        python-version: ${{ matrix.python-version }}
+    
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install -r requirements.txt
+        pip install pytest pytest-asyncio pytest-mock
+    
+    - name: Create test config
+      run: |
+        mkdir -p config
+        echo '{"binance": {"api_key": "test", "api_secret": "test"}}' > config/credentials.json
+    
+    - name: Run tests
+      run: |
+        python -m pytest tests/ -v
+    
+    - name: Test imports
+      run: |
+        python -c "import scalping_scanner; print('✅ Scalping scanner imports OK')"
+        python -c "import strategy_scanner; print('✅ Strategy scanner imports OK')"
+        python -c "import trading_executor; print('✅ Trading executor imports OK')"

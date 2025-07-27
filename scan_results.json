@@ -1,0 +1,37 @@
+{
+  "timestamp": "2025-07-27T09:24:36.640292",
+  "scan_duration": 218.83909344673157,
+  "total_signals": 388,
+  "selected_trades": [
+    {
+      "symbol": "AVAAIUSDT",
+      "action": "SELL",
+      "confidence": 90,
+      "strategy": "rsi_overbought",
+      "current_price": 0.049,
+      "target_price": 0.04753,
+      "stop_loss": 0.049980000000000004,
+      "score": 51.0206858
+    },
+    {
+      "symbol": "PROMPTUSDT",
+      "action": "SELL",
+      "confidence": 90,
+      "strategy": "rsi_overbought",
+      "current_price": 0.173,
+      "target_price": 0.16781,
+      "stop_loss": 0.17645999999999998,
+      "score": 50.8859628
+    },
+    {
+      "symbol": "1000SATSUSDT",
+      "action": "BUY",
+      "confidence": 90,
+      "strategy": "rsi_oversold",
+      "current_price": 4.6e-05,
+      "target_price": 4.7380000000000004e-05,
+      "stop_loss": 4.508e-05,
+      "score": 46.313852
+    }
+  ]
+}

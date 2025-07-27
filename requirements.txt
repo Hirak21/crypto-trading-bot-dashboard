@@ -1,32 +1,33 @@
-# Core dependencies
+# Core Trading Bot Dependencies
 python-binance>=1.0.19
 websockets>=11.0.3
 aiohttp>=3.8.5
-asyncio-mqtt>=0.13.0
 
-# Data processing and analysis
+# Data Processing and Analysis
 pandas>=2.0.3
 numpy>=1.24.3
-ta-lib>=0.4.26
 scipy>=1.11.1
 
-# Security and encryption
+# Security and Configuration
 cryptography>=41.0.3
-
-# Configuration and utilities
 pydantic>=2.1.1
 python-dotenv>=1.0.0
 pyyaml>=6.0.1
 
-# Logging and monitoring
+# Logging and Monitoring
 structlog>=23.1.0
 
-# Testing
+# Testing (Optional)
 pytest>=7.4.0
 pytest-asyncio>=0.21.1
 pytest-mock>=3.11.1
 
-# Development tools
+# Development Tools (Optional)
 black>=23.7.0
 flake8>=6.0.0
-mypy>=1.5.1
+
+# Dashboard Dependencies (Optional)
+# Uncomment if you want to run the React dashboard
+# react>=18.2.0
+# react-dom>=18.2.0
+# react-router-dom>=6.8.0

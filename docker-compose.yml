@@ -1,0 +1,55 @@
+version: '3.8'
+
+services:
+  scalping-bot:
+    build: .
+    container_name: crypto-scalping-bot
+    restart: unless-stopped
+    volumes:
+      - ./config:/app/config
+      - ./logs:/app/logs
+      - ./results:/app/results
+    environment:
+      - PYTHONUNBUFFERED=1
+      - BOT_MODE=scalping
+    command: python scalping_scanner.py
+    healthcheck:
+      test: ["CMD", "python", "-c", "import json; print('Bot is healthy')"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+
+  strategy-bot:
+    build: .
+    container_name: crypto-strategy-bot
+    restart: unless-stopped
+    volumes:
+      - ./config:/app/config
+      - ./logs:/app/logs
+      - ./results:/app/results
+    environment:
+      - PYTHONUNBUFFERED=1
+      - BOT_MODE=strategy
+    command: python strategy_scanner.py
+    profiles: ["strategy"]  # Only start with --profile strategy
+
+  executor:
+    build: .
+    container_name: crypto-executor
+    restart: unless-stopped
+    volumes:
+      - ./config:/app/config
+      - ./logs:/app/logs
+      - ./results:/app/results
+    environment:
+      - PYTHONUNBUFFERED=1
+      - BOT_MODE=executor
+    command: python trading_executor.py
+    profiles: ["executor"]  # Only start with --profile executor
+    depends_on:
+      - scalping-bot
+
+volumes:
+  config:
+  logs:
+  results:

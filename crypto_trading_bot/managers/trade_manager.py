@@ -277,7 +277,7 @@ class TradeManager:
             })
             return False, error_msg, None
     
-    def _execute_market_order(self, symbol: str, side: OrderSide, quantity: float,
+    async def _execute_market_order(self, symbol: str, side: OrderSide, quantity: float,
                              client_order_id: str, strategy_name: str,
                              signal_metadata: Dict[str, Any]) -> Tuple[bool, str, Optional[str]]:
         """Execute a market order with retry logic."""
